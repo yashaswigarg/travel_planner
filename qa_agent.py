@@ -59,7 +59,7 @@ async def validate_itinerary(budget: float, itinerary_path: str) -> dict | None:
 
     agent = LlmAgent(
         name="qa_tester",
-        model=config.ORCHESTRATOR_MODEL,
+        model=config.QA_AGENT_MODEL,
         instruction="You are a QA tester verifying an itinerary.",
         tools=[browser, report_itinerary, read_itinerary],
     )
